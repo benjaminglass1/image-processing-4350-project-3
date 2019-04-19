@@ -7,6 +7,7 @@ filter(438, 526) = 0;
 
 [im_filtered, fft_orig] = frequency_filter(im_orig, filter);
 
+% scale image fft values for display
 fft_orig = abs(fft_orig) - min(min(abs(fft_orig)));
 fft_orig = fft_orig / max(max(fft_orig));
 
@@ -15,7 +16,7 @@ subplot(2,2,1)
 imshow(im_orig)
 title('Image with sinusoidal interference')
 subplot(2,2,2)
-% to increase visibility of 1-pixel wide spectral 
+% zoomed to increase visibility of 1-pixel wide interference 
 imshow(fft_orig((412-50):(412+50), (500-50):(500+50)))
 title('Zoomed in spectrum')
 subplot(2,2,3)
