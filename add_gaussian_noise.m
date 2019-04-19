@@ -3,7 +3,7 @@ function add_gaussian_noise(img1,mean,variance)
 % This function takes img1, mean, and variance as inputs. It adds gaussian 
 % noise to original image based on these values and displays result.
 % img1 = imread('test-pattern.tif');
-% meanValue = 0;
+% mean = 0;
 % variance = 1000;
 
 gaussian_noise = sqrt(variance)*randn(size(img1)) + mean;
